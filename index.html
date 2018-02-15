@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="factors.js"></script>
+  <script>
+    function displaySayHelloResult() {
+      var firstNumberValue = document.getElementById("firstNumber").value;
+      var secondNumberValue = document.getElementById("secondNumber").value;
+      document.getElementById('displayResults').innerHTML = sayHello(firstNumberValue, secondNumberValue)
+    }
+  </script>
+
+  <title>Ben's GCD Calculator</title>
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-2">
+    <div class="mt-4">
+      <div class="class h1">
+        <img src="img/calculator.svg" alt="" width="72" height="72"> Ben's GCD Calculator
+      </div>
+      <p class="text-muted">Calculates the greatest common denominator of two numbers.</p>
+    </div>
+
+    <h4>Please enter two numbers:</h4>
+    <form>
+      <div class="form-row">
+        <div class="col-md-3 mt-2">
+          <input type="number" min=1 class="form-control" id="firstNumber" placeholder="First number..">
+        </div>
+        <div class="col-md-3 mt-2">
+          <input type="number" min=1 class="form-control" id="secondNumber" placeholder="Second number..">
+        </div>
+      </div>
+      <!-- <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Calculate</button>
+      </div> -->
+    </form>
+    <div class="mt-3">
+      <input type="submit" value="Calculate" class="btn btn-primary" onclick="displaySayHelloResult()" />
+    </div>
+
+    <!-- <div class="text mt-3" id='firstNumberFactors'>
+      This is a test.
+    </div>
+    <div class="text mt-3" id='secondNumberFactors'>
+      This is another test.
+    </div> -->
+    <div class="text mt-3" id='displayResults'>
+    </div>
+
+    <footer class="mt-5 text-muted text-small">
+      &copy; 2018 Nebbee
+    </footer>
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
