@@ -14,12 +14,14 @@
   <script src="factors.js"></script>
 
   <script>
-    function displaySayHelloResult() {
+    function displayGreatestCommonFactorResults() {
       var firstNumberValue = document.getElementById("firstNumber").value;
       var secondNumberValue = document.getElementById("secondNumber").value;
-      document.getElementById('resultsLine1Id').innerHTML = firstNumberValue
-      document.getElementById('resultsLine2Id').innerHTML = secondNumberValue
-      document.getElementById('resultsLine3Id').innerHTML = sayHello(firstNumberValue, secondNumberValue)
+
+      var greatestCommonFactorResults = calculateGreatestCommonFactor(firstNumberValue, secondNumberValue)
+      document.getElementById('resultsLine1Id').innerHTML = greatestCommonFactorResults.number1
+      document.getElementById('resultsLine2Id').innerHTML = greatestCommonFactorResults.number2
+      document.getElementById('resultsLine3Id').innerHTML = greatestCommonFactorResults.greatestCommonFactor
     }
 
     function displayResultsSection() {
@@ -35,7 +37,7 @@
     }
   </script>
 
-  <title>Ben's GCD Calculator</title>
+  <title>Ben's GCF Calculator</title>
 </head>
 
 <body class="bg-light">
@@ -44,14 +46,14 @@
 
     <div class="mt-4">
       <div class="class h1">
-        <img src="img/calculator.svg" alt="" width="72" height="72"> Ben's GCD Calculator
+        <img src="img/calculator.svg" alt="" width="72" height="72"> Ben's GCF Calculator
       </div>
-      <p class="text-muted">Calculates the greatest common denominator of two numbers.</p>
+      <p class="text-muted">Calculates the greatest common factor of two numbers.</p>
     </div>
 
     <div class="row">
 
-      <div class="col-md-6 mr-4" style="background-color:light;">
+      <div class="col-md-6 mr-4">
         <h4>Please enter two numbers:</h4>
         <form id='inputFormId'>
           <div class="form-row">
@@ -64,16 +66,16 @@
           </div>
         </form>
         <div class="mt-3 mb-3">
-          <input type="submit" class="btn btn-primary" value="Calculate" onclick="displayResultsSection(); displaySayHelloResult()" />
+          <input type="submit" class="btn btn-info" value="Calculate" onclick="displayResultsSection(); displayGreatestCommonFactorResults()" />
           <button type="button" class="btn btn-secondary ml-2" onclick="hideResultsSection(); clearInputFields()">Clear</button>
         </div>
       </div>
 
-      <div class="col-md-4" style="display: none; background-color:light;" id="resultsSectionId">
+      <div class="col-md-4" style="display: none" id="resultsSectionId">
         <h4 class="text-muted">Results:</h4>
         <div class="text mt-3" id='resultsLine1Id'></div>
         <div class="text mt-3" id='resultsLine2Id'></div>
-        <div class="text mt-3" id='resultsLine3Id'></div>
+        <div class="text mt-3 text-info" id='resultsLine3Id'></div>
       </div>
 
     </div>

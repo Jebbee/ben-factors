@@ -1,6 +1,8 @@
-// https://developers.google.com/web/tools/chrome-devtools/javascript/
-// view-source:https://googlechrome.github.io/devtools-samples/debug-js/get-started
 
-function sayHello(firstName, lastName) {
-  return "Hello " + firstName + " " + lastName
+function calculateGreatestCommonFactor(number1, number2) {
+  return {
+    number1: number1,
+    number2: number2,
+    greatestCommonFactor: 'TODO Calculate greatest common factor'
+  }
 }
