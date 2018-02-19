@@ -55,20 +55,21 @@
 
       <div class="col-md-6 mr-4">
         <h4>Please enter two numbers:</h4>
-        <form id='inputFormId'>
+        <!-- Form : return false to prevent page reload -->
+        <form id='inputFormId' onsubmit="displayResultsSection(); displayGreatestCommonFactorResults(); return false">
           <div class="form-row">
             <div class="col-md-6 mt-2">
-              <input type="number" min=1 class="form-control" id="firstNumber" placeholder="First number..">
+              <input type="number" min=1 class="form-control" id="firstNumber" placeholder="First number.." required>
             </div>
             <div class="col-md-6 mt-2">
-              <input type="number" min=1 class="form-control" id="secondNumber" placeholder="Second number..">
+              <input type="number" min=1 class="form-control" id="secondNumber" placeholder="Second number.." required>
             </div>
           </div>
+          <div class="mt-3 mb-3">
+            <input type="submit" class="btn btn-info" value="Calculate" />
+            <button type="button" class="btn btn-secondary ml-2" onclick="hideResultsSection(); clearInputFields()">Clear</button>
+          </div>
         </form>
-        <div class="mt-3 mb-3">
-          <input type="submit" class="btn btn-info" value="Calculate" onclick="displayResultsSection(); displayGreatestCommonFactorResults()" />
-          <button type="button" class="btn btn-secondary ml-2" onclick="hideResultsSection(); clearInputFields()">Clear</button>
-        </div>
       </div>
 
       <div class="col-md-4" style="display: none" id="resultsSectionId">
