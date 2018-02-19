@@ -11,7 +11,7 @@
   <script src="bootstrap-4.0.0/js/bootstrap.js"></script>
 
   <!-- My factors script -->
-  <script src="factors.js"></script>
+  <script src="factors-jj.js"></script>
 
   <script>
     function displayGreatestCommonFactorResults() {
@@ -59,9 +59,11 @@
 
     <div class="row mt-2">
 
+      <!-- Calculator form -->
+
       <div class="col-md-6 mr-4">
         <h4>Please enter two numbers:</h4>
-        <!-- Form : return false to prevent page reload -->
+        <!-- Return false from form to prevent page reload -->
         <form id="inputFormId" onsubmit="displayResultsSection(); displayGreatestCommonFactorResults(); return false">
           <div class="form-row">
             <div class="col-md-6 mt-2">
@@ -77,6 +79,8 @@
           </div>
         </form>
       </div>
+
+      <!-- Results card -->
 
       <div class="col-md-4" style="display: none" id="resultsSectionId">
         <div class="card bg-info text-white">
