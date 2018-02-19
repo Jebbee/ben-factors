@@ -18,22 +18,28 @@
       var firstNumberValue = document.getElementById("firstNumber").value;
       var secondNumberValue = document.getElementById("secondNumber").value;
 
+      var firstNumberFactors = factors(firstNumberValue)
+      var secondNumberFactors = factors(secondNumberValue)
+
       var greatestCommonFactorResults = calculateGreatestCommonFactor(firstNumberValue, secondNumberValue)
-      document.getElementById('resultsLine1Id').innerHTML = greatestCommonFactorResults.number1
-      document.getElementById('resultsLine2Id').innerHTML = greatestCommonFactorResults.number2
-      document.getElementById('resultsLine3Id').innerHTML = greatestCommonFactorResults.greatestCommonFactor
+
+      document.getElementById("firstNumberValueId").innerHTML = firstNumberValue
+      document.getElementById("firstNumberFactorsId").innerHTML = firstNumberFactors.join(" ")
+      document.getElementById("secondNumberValueId").innerHTML = secondNumberValue
+      document.getElementById("secondNumberFactorsId").innerHTML = secondNumberFactors.join(" ")
+      document.getElementById("greatestCommonFactorId").innerHTML = greatestCommonFactorResults.greatestCommonFactor
     }
 
     function displayResultsSection() {
-      document.getElementById('resultsSectionId').style.display = 'block'
+      document.getElementById("resultsSectionId").style.display = "block"
     }
 
     function hideResultsSection() {
-      document.getElementById('resultsSectionId').style.display = 'none'
+      document.getElementById("resultsSectionId").style.display = "none"
     }
 
     function clearInputFields() {
-      document.getElementById('inputFormId').reset()
+      document.getElementById("inputFormId").reset()
     }
   </script>
 
@@ -56,7 +62,7 @@
       <div class="col-md-6 mr-4">
         <h4>Please enter two numbers:</h4>
         <!-- Form : return false to prevent page reload -->
-        <form id='inputFormId' onsubmit="displayResultsSection(); displayGreatestCommonFactorResults(); return false">
+        <form id="inputFormId" onsubmit="displayResultsSection(); displayGreatestCommonFactorResults(); return false">
           <div class="form-row">
             <div class="col-md-6 mt-2">
               <input type="number" min=1 class="form-control" id="firstNumber" placeholder="First number.." required>
@@ -78,11 +84,53 @@
             <h4>Results</h4>
           </div>
           <div class="card-body">
-            <div class="card-text" id='resultsLine1Id'></div>
-            <div class="card-text mt-2" id='resultsLine2Id'></div>
-            <div class="card-text mt-2" id='resultsLine3Id'></div>
+            <div class="row font-weight-bold">
+              <div class="col-6">Number</div>
+              <div class="col">Factors</div>
+            </div>
+            <div class="row">
+              <div class="col-6" id="firstNumberValueId"></div>
+              <div class="col" id="firstNumberFactorsId"></div>
+            </div>
+            <div class="row">
+              <div class="col-6" id="secondNumberValueId"></div>
+              <div class="col" id="secondNumberFactorsId"></div>
+            </div>
+            <p/>
+            <div class="row">
+              <div class="col">Greatest Common Factor:</div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <h3 id="greatestCommonFactorId"></h3>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- <ul class="list-group">
+          <li class="list-group-item bg-info text-white">
+            <h4>Results</h4>
+          </li>
+          <li class="list-group-item d-flex justify-content-between list-group-item-info">
+            <div>
+              <h6>Numbers<h6>
+            </div>
+            <span><h6>Factors<h6></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between list-group-item-info">
+            <div id="firstNumberValueId"></div>
+            <span id="firstNumberFactorsId"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between list-group-item-info">
+            <div id="secondNumberValueId"></div>
+            <span id="secondNumberFactorsId"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between list-group-item-info">
+            <div>Greatest Common Factor</div>
+            <span id="greatestCommonFactorId"></span>
+          </li>
+        </ul> -->
       </div>
 
     </div>
