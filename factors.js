@@ -1,7 +1,7 @@
-function factors(n) {
+function factors(number) {
   var factorsArray = []
 
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < number; i++) {
     factorsArray.push(i + 1)
   }
 
