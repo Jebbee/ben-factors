@@ -5,7 +5,7 @@ function isFactor(number, candidate) {
 function factors(number) {
   var factorsArray = []
 
-  for (i = 1; i <= number; i++) {
+  for (var i = 1; i <= number; i++) {
     if (isFactor(number, i)) {
       factorsArray.push(i)
     }
@@ -16,17 +16,13 @@ function factors(number) {
 
 function calculateGreatestCommonFactor(number1, number2) {
   var greatestCommonFactor = 1
-  var smallerNumber = (number1 < number2) ? number1 : number2
 
-  for (i = 1; i <= smallerNumber; i++) {
+  // TODO Optimization : Only loop through up to the smallest number
+  for (var i = 1; i <= number1; i++) {
     if (isFactor(number1, i) && isFactor(number2, i)) {
       greatestCommonFactor = i
     }
   }
 
-  return {
-    number1: number1,
-    number2: number2,
-    greatestCommonFactor: greatestCommonFactor
-  }
+  return greatestCommonFactor
 }

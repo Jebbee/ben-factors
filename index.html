@@ -21,13 +21,13 @@
       var firstNumberFactors = factors(firstNumberValue)
       var secondNumberFactors = factors(secondNumberValue)
 
-      var greatestCommonFactorResults = calculateGreatestCommonFactor(firstNumberValue, secondNumberValue)
+      var greatestCommonFactor = calculateGreatestCommonFactor(firstNumberValue, secondNumberValue)
 
       document.getElementById("firstNumberValueId").innerHTML = firstNumberValue
       document.getElementById("firstNumberFactorsId").innerHTML = firstNumberFactors.join(" ")
       document.getElementById("secondNumberValueId").innerHTML = secondNumberValue
       document.getElementById("secondNumberFactorsId").innerHTML = secondNumberFactors.join(" ")
-      document.getElementById("greatestCommonFactorId").innerHTML = greatestCommonFactorResults.greatestCommonFactor
+      document.getElementById("greatestCommonFactorId").innerHTML = greatestCommonFactor
     }
 
     function displayResultsSection() {
